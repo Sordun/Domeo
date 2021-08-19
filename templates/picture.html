@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <p id="demo"></p>
+
+    <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+    </script>
+</head>
+<body>
+<form method="post" id="currentForm">
+    <h4>Имя</h4>
+    <input type="text" name="userName" size="40">
+    <h4>Фамилия</h4>
+    <input type="text" name="userSurname" size="40">
+
+    <div><h4>Пол:</h4>
+   <input type="radio" name="gender" value="Man">Мужчина
+   <input type="radio" name="gender" value="Women">Женщина
+    </div><br>
+
+    <div>
+    <input type="checkbox" id="citizen" name="citizen">
+    <label for="citizen">Гражданин РФ</label>
+    </div> <br>
+    <h4>Дата рождения:</h4>
+    <input type="date" id="dateBorn" name="dateBorn"
+       value="1990-01-01"
+       min="1900-01-01" max="2021-12-31">
+
+    <h4>Образование</h4>
+    <p><select name="education">
+    <option>Выберите образование</option>
+    <option value="1">Среднее</option>
+    <option value="2">Высшее неоконченное</option>
+    <option value="3">Высшее</option>
+    </select></p>
+
+    <h4>О себе:</h4>
+    <textarea name="comment" id="comment"></textarea>
+
+    <div>
+        <button id="save">Сохранить</button>
+    </div>
+</form>
+</body>
+</html>
