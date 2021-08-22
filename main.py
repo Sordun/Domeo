@@ -16,7 +16,7 @@ class Users(db.Model):
     bornDate = db.Column(db.String(50), nullable=True)
     gender = db.Column(db.String(50), nullable=True)
 
-    def __repr__(self):
+    def __str__(self):
         return f"<users {self.name}>"
 
 
@@ -28,7 +28,7 @@ class Profiles(db.Model):
 
     id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
-    def __repr__(self):
+    def __str__(self):
         return f"<profiles {self.user_id}>"
 
 
